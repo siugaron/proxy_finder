@@ -1,5 +1,5 @@
 {
-  "name": "kubrey/proxier",
+  "name": "siugaron/proxy_search",
   "description": "Parsing free proxy lists",
   "keywords": [
     "proxy",
@@ -9,8 +9,8 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "kubrey",
-      "email": "kubrey.work@gmail.com"
+      "name": "siugaron",
+      "email": "siugaron@gmail.com"
     }
   ],
   "require": {
