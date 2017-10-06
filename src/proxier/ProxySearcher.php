@@ -16,7 +16,8 @@ class ProxySearcher
     protected $proxies = array();
     protected $errors = array();
 
-    public function __construct($options = array()) {
+    public function __construct($options = array())
+    {
         $this->options = $options;
     }
 
@@ -24,14 +25,17 @@ class ProxySearcher
      * @param array $sitesSet
      * @return array
      */
-    public function run($sitesSet = array()) {
-        $sites = $sitesSet ? $sitesSet : array('ProxitoryCom' => true,
+    public function run($sitesSet = array())
+    {
+        $sites = $sitesSet ? $sitesSet : [
+
             'UsProxyOrg' => true,
-            'PublicProxyServersCom' => true,
-            'ProxylistMe' => true,
+
             'ProxyListeDe' => true,
-            'HideMyAssCom' => true
-        );
+
+            'FreeProxyListNet' => true,
+            'SslProxiesOrg' => true
+        ];
         foreach ($this->options as $key => $optVal) {
             if (in_array($key, $sites) && !$optVal) {
                 $sites[$key] = false;
@@ -64,7 +68,8 @@ class ProxySearcher
      * @param $error
      * @return $this
      */
-    public function setError($error) {
+    public function setError($error)
+    {
         $this->errors[] = $error;
         return $this;
     }
@@ -72,7 +77,8 @@ class ProxySearcher
     /**
      * @return array
      */
-    public function getErrors() {
+    public function getErrors()
+    {
         return $this->errors;
     }
 }

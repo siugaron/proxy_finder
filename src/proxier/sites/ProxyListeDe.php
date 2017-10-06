@@ -41,7 +41,7 @@ class ProxyListeDe extends BaseSiteCom
         $this->setCurlOption(CURLOPT_POST, 1);
         $this->setCurlOption(CURLOPT_POSTFIELDS, http_build_query($post));
         $this->runCurl();
-        $this->parseTable();
+        $this->_parseTable();
 
     }
 
@@ -80,7 +80,7 @@ class ProxyListeDe extends BaseSiteCom
     /**
      * @return bool
      */
-    protected function parseTable() {
+    protected function _parseTable() {
         $dom = new \DOMDocument();
         $dom->preserveWhiteSpace = false;
         $dom->validateOnParse = true;
